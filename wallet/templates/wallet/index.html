@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+{% load static from staticfiles %}
+
+<head>
+	<link href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+	<title>Wallet demo</title>
+</head>
+<body class="container">
+	<h1>Transactions</h1>
+	<h4>Balance - {{transactions.first.balance}}</h4>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Transaction #</th>
+				<th>Debit</th>
+				<th>Credit</th>
+				<th>Reason</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for transaction in transactions %}
+			<tr>
+				<td>{{ transaction.transaction_id }}</td>
+				<td>{{ transaction.deposit }}</td>
+				<td>{{ transaction.deduction }}</td>
+				<td>{{ transaction.reason }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>
