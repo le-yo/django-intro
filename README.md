@@ -3,8 +3,8 @@
 Learning django by building a simple online wallet
 
 ###To install django
-   
-   pip install -r requirements.txt
+
+    pip install -r requirements.txt
 
 ###To run test server
 
