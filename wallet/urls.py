@@ -3,4 +3,5 @@ import views
 
 urlpatterns = patterns('',
     url(r'^$', views.wallet, name='transactions'),
+    url(r'^add-transaction',views.addtransaction, name='addtransaction'),
 )
