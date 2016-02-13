@@ -18,7 +18,7 @@ class Transactions(models.Model):
 	reason = models.CharField(max_length=20, choices=REASON_CHOICES)
 	created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
 	updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
-
+	owner=models.ForeignKey('auth.User',related_name='transactions')
 	def total_deposits(self):
 		return Transactions.objects.aggregate(total_deposits=Sum('deposit')).get('total_deposits') or 0.0
 

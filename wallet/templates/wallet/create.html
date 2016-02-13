@@ -1,1 +1,7 @@
+<form action="/wallet/add-transaction" method="post">
 {{form}}
+{%csrf_token%}
+{{buttons}}
+<button type='submit' text="save">save</button>
+{{endbutton}}
+</form>

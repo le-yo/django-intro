@@ -13,5 +13,6 @@ class TransactionsSer(serializers.ModelSerializer):
             'reason',
             'created_at',
             'updated_at',
+            'owner'
         )
-        depth = 0
+        depth = 1
